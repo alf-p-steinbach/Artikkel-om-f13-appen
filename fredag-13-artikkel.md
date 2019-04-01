@@ -315,7 +315,7 @@ Med disse valgene ble appen seende ut som vist på starten av artikkelen,
 
 ## Noter for bygging av C++ konsollprogrammet.
 
-C++koden bruker som nevnt *cppx-core*-mikrobiblioteket, som i sin tur bruker et enda mer mikroskopisk lite bibliotek kalt *C header wrappers*. Begge disse er rene header-biblioteker, som betyr at de ikke behøver å bygges, men *cpp-core* krever C++17 eller senere. Med g++ betyr det å bruke en kommando à la
+C++koden bruker som nevnt *cppx-core*-mikrobiblioteket, som i sin tur bruker et enda mer mikroskopisk lite bibliotek kalt *C header wrappers*. Begge disse er rene header-biblioteker, som betyr at de ikke behøver å bygges, men *cppx-core* krever C++17 eller senere. Med g++ betyr det å bruke en kommando à la
 
 > ***`g++ -std=c++17 -I. main.cpp -o f13`***
 
