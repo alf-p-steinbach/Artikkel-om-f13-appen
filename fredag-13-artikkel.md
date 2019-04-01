@@ -356,7 +356,7 @@ mens med Visual C++ er det mer krøkkete å få kompilatoren standard-konform:
         <td><a href="https://github.com/alf-p-steinbach/cppx-core">https://github.com/alf-p-steinbach/cppx-core</a></td>
     </tr>
     <tr>
-        <td><i>C header wrappers</i>-biblioteket:</td>
+        <td>C++ <i>C header wrappers</i>-biblioteket:</td>
         <td><a href="https://github.com/alf-p-steinbach/C-header-wrappers">https://github.com/alf-p-steinbach/C-header-wrappers</a></td>
     </tr>
 </table>
