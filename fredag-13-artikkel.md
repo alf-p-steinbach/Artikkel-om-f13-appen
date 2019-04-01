@@ -164,28 +164,26 @@ Jeg valgte å ha arrayet med månedsnavn lokalt i metoden `monthName`, rent prin
 I C++ er koden til forveksling lik, med arrayet inne i en funksjon,
 
 ~~~cpp
-    namespace norwegian
+namespace norwegian
+{
+    $use_cppx( Raw_array_ );
+    $use_std( string, string_view );
+    using namespace my::string_building;
+    constexpr inline auto month_name( const int i )
+        -> string_view
     {
-        $use_cppx( Raw_array_ );
-        $use_std( string, string_view );
-        using namespace my::string_building;
-
-        constexpr inline auto month_name( const int i )
-            -> string_view
+        constexpr Raw_array_<string_view> the_names =
         {
-            constexpr Raw_array_<string_view> the_names =
-            {
-                "januar", "februar", "mars", "april", "mai", "juni", "juli", 
-                "august", "september", "oktober", "november", "desember"
-            };
-            
-            return the_names[i];
-        }
+            "januar", "februar", "mars", "april", "mai", "juni", "juli", 
+            "august", "september", "oktober", "november", "desember"
+        };
         
-        inline auto daymonth_string_from( const my::Date& date )
-            -> string
-        { return ""s << date.day() << ". " << month_name( date.month() - 1 ); }
-    }  // namespace norwegian
+        return the_names[i];
+    }
+    
+    inline auto daymonth_string_from( const my::Date& date )
+        -> string
+    { return ""s << date.day() << ". " << month_name( date.month() - 1 ); }
 }  // namespace norwegian
 ~~~
 
@@ -319,7 +317,6 @@ C++koden bruker som nevnt *cppx-core*-mikrobiblioteket, som i sin tur bruker et 
 
 > ***`g++ -std=c++17 -I. main.cpp -o f13`***
 
-
 mens med Visual C++ er det mer krøkkete å få kompilatoren standard-konform:
 
 > [E:\root\writings\articles\technical\norwegian\kode-24\fredag-13\app\c++]  
@@ -329,7 +326,7 @@ mens med Visual C++ er det mer krøkkete å få kompilatoren standard-konform:
 > c:\my\dev\include\cppx-core/assert-c++17-or-later.hpp(7): fatal error C1083: Cannot open include file: 'C++17-or-later-is-required': No such file or directory  
 >  
 > [E:\root\writings\articles\technical\norwegian\kode-24\fredag-13\app\c++]  
-> `>` ***`cl /std:c++17 /Zc:__cplusplus /utf-8 /I. main.cpp /Fe"f13"`***  
+> \> ***`cl /std:c++17 /Zc:__cplusplus /utf-8 /I. main.cpp /Fe"f13"`***  
 > main.cpp
 >  
 > [E:\root\writings\articles\technical\norwegian\kode-24\fredag-13\app\c++]  
@@ -360,4 +357,3 @@ mens med Visual C++ er det mer krøkkete å få kompilatoren standard-konform:
         <td><a href="https://github.com/alf-p-steinbach/C-header-wrappers">https://github.com/alf-p-steinbach/C-header-wrappers</a></td>
     </tr>
 </table>
-
