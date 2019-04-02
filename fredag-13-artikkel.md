@@ -304,7 +304,7 @@ En mulig løsning er å legge på en animasjon slik som en fade-in-effekt, en te
 
 ---
 
-*Design-avgjørelse*: jeg valgte nøytrale farger i retning sykehus/skjema. Det ser traurig ut, og kunne nok vært supplert med å la brukeren velge fra en palett, eventuelt med bakgrunnsbilder etc., og der er vi tilbake til manglende fellesfunksjonalitet igjen: Firefox gir mulighet til å veksle mellom definerte stilsettinger, men jeg ser ikke noe slikt i Chrome eller Edge, som gir en føring i retning av ikke ønskelig nettleser­spesifikt brukergrensessnitt. Men jeg synes å huske at websiden til OO-pionér Kristen Nygård var slik visuelt trist med omtrent disse fargene, men funksjonell, og det er godt selskap å være i. :)
+*Design-avgjørelse*: jeg valgte nøytrale farger i retning sykehus/skjema. Det ser traurig ut, og kunne nok vært supplert med å la brukeren velge fra en palett, eventuelt med bakgrunnsbilder etc., og der er vi tilbake til manglende fellesfunksjonalitet igjen: Firefox gir mulighet til å veksle mellom definerte stilsettinger, men jeg ser ikke noe slikt i Chrome eller Edge, som gir en føring i retning av ikke ønskelig nettleser­spesifikt brukergrensesnitt. Men jeg synes å huske at websiden til OO-pionér Kristen Nygård var slik visuelt trist med omtrent disse fargene, men funksjonell, og det er godt selskap å være i. :)
 
 ---
 
