@@ -169,6 +169,7 @@ namespace norwegian
     $use_cppx( Raw_array_ );
     $use_std( string, string_view );
     using namespace my::string_building;
+
     constexpr inline auto month_name( const int i )
         -> string_view
     {
