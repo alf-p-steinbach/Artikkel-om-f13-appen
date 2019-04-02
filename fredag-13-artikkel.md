@@ -33,19 +33,19 @@ auto main() -> int
     $use_cppx( enumerated );
     $use_std( cout, endl );
 
-    int days_per_month[] = {31, 0, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-    for( const auto the: enumerated( {"normalår", "skuddår"} ) )
+    for( const auto each: enumerated( {"normalår", "skuddår"} ) )
     {
-        days_per_month[1] = 28 + the.index;
+        const int feb = 28 + each.index;
+        const int days_per_month[] = {31, feb, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
         int weekday_hits[7] = {};
         int day_number = 0;
-        for( const int days: days_per_month )
+        for( const int days : days_per_month )
         {
             day_number += days;
             ++weekday_hits[day_number % 7];
         }
-        for( const int n_hits: weekday_hits ) { cout << n_hits << " "; }
-        cout << "(" << the.item << ")" << endl;
+        for( const int n_hits : weekday_hits ) { cout << n_hits << " "; }
+        cout << "(" << each.item << ")" << endl;
     }
 }
 ~~~
