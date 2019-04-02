@@ -39,12 +39,12 @@ auto main() -> int
         const int days_per_month[] = {31, feb, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
         int weekday_hits[7] = {};
         int day_number = 0;
-        for( const int days : days_per_month )
+        for( const int days: days_per_month )
         {
             day_number += days;
             ++weekday_hits[day_number % 7];
         }
-        for( const int n_hits : weekday_hits ) { cout << n_hits << " "; }
+        for( const int n_hits: weekday_hits ) { cout << n_hits << " "; }
         cout << "(" << each.item << ")" << endl;
     }
 }
